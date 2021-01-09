@@ -6,6 +6,11 @@ $.ajax({
   }).then(function(response) {
     console.log(response);
     $("#card-title1").text(response.Title);
+    $("#plot1").text(response.Plot);
+    $("#cast1").text(response.Actors);
+    $("#awards1").text(response.Awards);
+
+
   });
 
 
