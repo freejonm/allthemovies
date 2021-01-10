@@ -1,7 +1,15 @@
+* {
+    padding: 10px;
+}
+
 body {
     background-color: whitesmoke;
     text-align: center;
     padding: 50px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .card {

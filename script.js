@@ -6,11 +6,10 @@ $.ajax({
   }).then(function(response) {
     console.log(response);
     $("#card-title1").text(response.Title);
-    $("#plot1").text(response.Plot);
-    $("#cast1").text(response.Actors);
-    $("#awards1").text(response.Awards);
-
-
+    $("#year-director").text("Released " + response.Released + " Director: " + response.Director);
+    $("#plot1").text("Plot summary: " + response.Plot);
+    $("#cast1").text("Cast: " + response.Actors);
+    $("#awards1").text("Awards info: " + response.Awards);
   });
 
 
