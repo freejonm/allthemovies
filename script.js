@@ -25,7 +25,7 @@ function renderCards(){
       $("body").append(
         "<div class = title>" + response.Title + "</div>" +
         "<div class = release> released " + response.Released + "</div>" +
-        "<div class = director> dir " + response.Director+ "</div>" +
+        "<div class = director>" + response.Director+ "</div>" +
         "<div class = cast>" + response.Actors+ "</div>" +
         "<div class = plot>" + response.Plot + "</div>"
         );
