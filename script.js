@@ -5,8 +5,15 @@ var movies = [
   {title: "breathless"},
   {title: "dazed+and+confused"}
 ]
+
+
+
+function renderCards(){
+  for(var i = 0; i < movies.length; i++){
+
+    
 $.ajax({
-    url: "https://www.omdbapi.com/?t=jurassic+park&y=&plot=short&apikey=c2a157c7",
+    url: "https://www.omdbapi.com/?t=" + movies[i].title +"&y=&plot=short&apikey=c2a157c7",
     method: "GET"
   }).then(function(response) {
     console.log(response);
@@ -15,6 +22,8 @@ $.ajax({
     $("#plot1").text("Plot summary: " + response.Plot);
     $("#cast1").text("Cast: " + response.Actors);
     $("#awards1").text("Awards info: " + response.Awards);
-  });
+  
+  })}
+  }
 
-
+  renderCards();
