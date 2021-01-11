@@ -27,17 +27,12 @@ function renderCards(){
         "<div>" + response.Released + "</div>" +
         "<div>" + response.Director+ "</div>" +
         "<div>" + response.Actors+ "</div>" +
-        "<div>" + response.Plot + "</div>" +
-        "<div>" + review + "</div>"
+        "<div>" + response.Plot + "</div>"
         );
-
-      // $("#card-title1").text(response.Title);
-      // $("#year-director").text("Released " + response.Released + " Director: " + response.Director);
-      // $("#plot1").text("Plot summary: " + response.Plot);
-      // $("#cast1").text("Cast: " + response.Actors);
-      // $("#awards1").text("Awards info: " + response.Awards);
-  
-  })}
+        
+    })
+    
+    }
   }
 
   renderCards();
