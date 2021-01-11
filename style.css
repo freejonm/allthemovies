@@ -16,3 +16,14 @@ ul {
     width: 100%;
 }
 
+.title {
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 2px;
+    padding: 0px;
+}
+
+.release {
+    margin-top: 2px;
+    padding: 0px;
+}

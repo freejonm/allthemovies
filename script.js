@@ -1,10 +1,10 @@
 var movies = [
   {title: "jurassic+park",
-   review: "a fund romp. kids love and are terrified by it. adults remember being kids." },
+   review: "a fun romp. kids love and are terrified by it. adults remember being kids." },
   {title: "breathless",
    review: "bonnie et clyde. she's a winner, he's a loser, but you can't outsmart the paris police." },
   {title: "dazed+and+confused",
-   review: "come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." }
+   review: "essential viewing. come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." }
 ]
 
 
@@ -23,11 +23,11 @@ function renderCards(){
       console.log(response);
 
       $("body").append(
-        "<div>" + response.Title + "</div>" +
-        "<div>" + response.Released + "</div>" +
-        "<div>" + response.Director+ "</div>" +
-        "<div>" + response.Actors+ "</div>" +
-        "<div>" + response.Plot + "</div>"
+        "<div class = title>" + response.Title + "</div>" +
+        "<div class = release> released " + response.Released + "</div>" +
+        "<div class = director> dir " + response.Director+ "</div>" +
+        "<div class = cast>" + response.Actors+ "</div>" +
+        "<div class = plot>" + response.Plot + "</div>"
         );
         
     })
