@@ -21,11 +21,12 @@ ul {
     font-size: larger;
     margin-bottom: 2px;
     padding: 0px;
-    float: left;
+   
 }
 
 .release {
     margin-top: 2px;
     padding: 0px;
     font-size: small;
+    
 }
