@@ -24,7 +24,7 @@ function renderCards(){
 
       $("body").append(
         "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
-        "</h5></div></div>"
+        "</h5><p id = year-director>released " + response.Released + "</p></div></div>"
 
 
 
