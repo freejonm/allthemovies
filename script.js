@@ -23,11 +23,16 @@ function renderCards(){
       console.log(response);
 
       $("body").append(
-        "<div class = title>" + response.Title + "</div>" +
-        "<div class = release> released " + response.Released + "</div>" +
-        "<div class = director>" + response.Director+ "</div>" +
-        "<div class = cast>" + response.Actors+ "</div>" +
-        "<div class = plot>" + response.Plot + "</div>"
+        "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
+        "</h5></div></div>"
+
+
+
+        // "<div class = title>" + response.Title + "</div>" +
+        // "<div class = release> released " + response.Released + "</div>" +
+        // "<div class = director>" + response.Director+ "</div>" +
+        // "<div class = cast>" + response.Actors+ "</div>" +
+        // "<div class = plot>" + response.Plot + "</div>"
         );
         
     })
