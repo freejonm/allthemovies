@@ -13,8 +13,10 @@ function renderCards(){
   for(var i = 0; i < movies.length; i++){
     var title = movies[i].title;
     var review = movies[i].review;
-    console.log(title);
-    console.log(review); 
+
+    console.log(review);
+    
+    
 
     $.ajax({
       url: "https://www.omdbapi.com/?t=" + title +"&y=&plot=short&apikey=c2a157c7",
@@ -24,7 +26,8 @@ function renderCards(){
 
       $("body").append(
         "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
-        "</h5><p id = year-director>released " + response.Released + "</p></div></div>"
+        "</h5><p id = year-director>released " + response.Released + 
+        "</p><p class = card-text>" + review + "</p></div></div>"
 
 
 
