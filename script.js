@@ -4,7 +4,7 @@ var movies = [
   {title: "breathless",
    review: "bonnie et clyde. she's a winner, he's a loser, but you can't outsmart the paris police." },
   {title: "dazed+and+confused",
-   review: "essential viewing. come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." }
+   review: "come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." }
 ]
 
 
@@ -26,7 +26,7 @@ function renderCards(){
 
       $("body").append(
         "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
-        "</h5><p id = year-director>released " + response.Released + 
+        "</h5><p id = year-director>" + response.Year + 
         "</p><p class = card-text>" + review + "</p></div></div>"
 
 
