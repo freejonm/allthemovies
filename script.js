@@ -1,13 +1,21 @@
 var movies = [
-  {title: "jurassic+park",
-   rating: "3",
-   review: "a fun romp. kids love and are terrified by it. adults remember being kids." },
   {title: "breathless",
    rating: "4",
    review: "bonnie et clyde. she's a winner, he's a loser, but you can't fool the paris police." },
-  {title: "dazed+and+confused",
-   rating: "5",
-   review: "come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." }
+
+   {title: "dazed+and+confused",
+    rating: "5",
+    review: "come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." },
+
+   {title: "e.t.",
+    rating: "4.5",
+    review: "e.t. getting drunk is my whole asthetic."
+   },
+  
+  {title: "jurassic+park",
+   rating: "3",
+   review: "a fun romp. kids love and are terrified by it. adults remember being kids." },
+  
 ]
 
 
@@ -37,3 +45,11 @@ function renderCards(){
       };
 
   renderCards();
+
+  // ADD USERS
+  // create user handler
+  // users can add and save their own reviews by entering the name of a movie in a search field
+
+  // USER STATS
+  // categorize user by taste in movies using user ratings compared to imdb votes
+  // show user's favorite genre by averaging ratings within genre
