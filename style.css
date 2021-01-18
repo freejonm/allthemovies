@@ -23,16 +23,19 @@ body {
     margin-bottom: 20px;
 }
 
-
-
 .card-info {
+    background-color: #a2adb8;
+    font-size: medium;
+}
+
+.my-info {
     color: black;
 }
 
 
 
 #card-title {
-    background-color: #4F6367;
+    background-color: #a2adb8;
     color: white;
     font-weight: bold;
     font-size: large;

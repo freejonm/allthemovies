@@ -36,8 +36,8 @@ function renderCards(){
               "</h3><p class=card-info id=year>" + response.Year + 
               "</p><p class=card-info id=director>" + response.Director +
               "</p><p class=card-info id=cast>" + response.Actors +
-              "</p><p class=card-info id=rating>" + element.rating + "/5"+
-              "</p><p class = card-info id=review>"+element.review+"</p></div></div>"
+              "</p><p class=my-info id=rating>" + element.rating + "/5"+
+              "</p><p class=my-info id=review>"+element.review+"</p></div></div>"
               );
           })
         ))
