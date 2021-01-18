@@ -32,12 +32,12 @@ function renderCards(){
             console.log(response);
             // append cards
             $("body").append(
-              "<div class = card><div class = card-body><h3 id = card-title>" + response.Title +
-              "</h3><p class=card-info id=year>" + response.Year + 
-              "</p><p class=card-info id=director>" + response.Director +
-              "</p><p class=card-info id=cast>" + response.Actors +
-              "</p><p class=my-info id=rating>" + element.rating + "/5"+
-              "</p><p class=my-info id=review>"+element.review+"</p></div></div>"
+              "<div class = card><div class = card-body><div class=APIinfo><p id = card-title>" + response.Title +
+              "</p><p class=APIinfo id=year>" + response.Year + 
+              "</p><p class=APIinfo id=director>" + response.Director +
+              "</p><p class=APIinfo id=cast>" + response.Actors +
+              "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
+              "</p><p id=review>"+element.review+"</p></div></div>"
               );
           })
         ))
