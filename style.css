@@ -1,5 +1,7 @@
 * {
     padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 1px;
 }
 
 body {
@@ -7,27 +9,36 @@ body {
     color: white;
     text-align: center;
     padding: 50px;
+    
 }
 
 #top-line {
     font-size: xx-large;
+    font-weight: 900;
 }
 
 .card {
     width: 100%;
+    text-transform: lowercase;
+    margin-bottom: 20px;
 }
 
+.card-body {
+    margin: 0px;
+}
 .card-info {
     color: black;
 }
+
+
 
 #card-title {
     background-color: black;
     color: white;
     font-weight: bold;
-    font-size: x-large;
+    font-size: large;
     font-style: italic;
-    text-transform: lowercase;
+    
     
     padding: 20px;
 }
