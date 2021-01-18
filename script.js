@@ -1,17 +1,18 @@
 var movies = [
   {title: "jurassic+park",
+   rating: "3",
    review: "a fun romp. kids love and are terrified by it. adults remember being kids." },
   {title: "breathless",
-   review: "bonnie et clyde. she's a winner, he's a loser, but you can't outsmart the paris police." },
+   rating: "4",
+   review: "bonnie et clyde. she's a winner, he's a loser, but you can't foool the paris police." },
   {title: "dazed+and+confused",
+   rating: "5",
    review: "come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." }
 ]
 
 
 
 function renderCards(){
-
-    
 
     movies.forEach(element => (
 
@@ -21,10 +22,11 @@ function renderCards(){
             method: "GET"
           }).then(function(response) {
             console.log(response);
-      
+            // append cards
             $("body").append(
               "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
               "</h5><p id = year-director>" + response.Year + 
+              "</p><p id=rating>" + element.rating + "/5"+
               "</p><p class = card-text>"+element.review+"</p></div></div>"
               );
           })
