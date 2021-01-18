@@ -25,7 +25,8 @@ function renderCards(){
             // append cards
             $("body").append(
               "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
-              "</h5><p id = year-director>" + response.Year + 
+              "</h5><p id=year>" + response.Year + 
+              "</p><p id=director>" + response.Director +
               "</p><p id=rating>" + element.rating + "/5"+
               "</p><p class = card-text>"+element.review+"</p></div></div>"
               );
