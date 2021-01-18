@@ -3,14 +3,14 @@
 }
 
 body {
-    background-color:black;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 50px;
 }
 
-ul {
-    list-style-type: none;
+#top-line {
+    font-size: xx-large;
 }
 
 .card {
@@ -20,12 +20,14 @@ ul {
 .card-info {
     color: black;
 }
+
 #card-title {
     background-color: black;
     color: white;
-    font-weight: bolder;
-    font-size: xx-large;
+    font-weight: bold;
+    font-size: x-large;
     font-style: italic;
+    text-transform: lowercase;
     
     padding: 20px;
 }
