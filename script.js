@@ -10,37 +10,26 @@ var movies = [
 
 
 function renderCards(){
-  for(var i = 0; i < movies.length; i++){
-    var title = movies[i].title;
-    var review = movies[i].review;
 
-    console.log(review);
-    
     
 
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=" + title +"&y=&plot=short&apikey=c2a157c7",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
+    movies.forEach(element => (
 
-      $("body").append(
-        "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
-        "</h5><p id = year-director>" + response.Year + 
-        "</p><p class = card-text>" + review + "</p></div></div>"
-
-
-
-        // "<div class = title>" + response.Title + "</div>" +
-        // "<div class = release> released " + response.Released + "</div>" +
-        // "<div class = director>" + response.Director+ "</div>" +
-        // "<div class = cast>" + response.Actors+ "</div>" +
-        // "<div class = plot>" + response.Plot + "</div>"
-        );
-        
-    })
-    
-    }
-  }
+      // call OMDB API
+      $.ajax({
+            url: "https://www.omdbapi.com/?t=" + element.title +"&y=&plot=short&apikey=c2a157c7",
+            method: "GET"
+          }).then(function(response) {
+            console.log(response);
+      
+            $("body").append(
+              "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
+              "</h5><p id = year-director>" + response.Year + 
+              "</p><p class = card-text>"+element.review+"</p></div></div>"
+              );
+          })
+        ))
+      
+      };
 
   renderCards();
