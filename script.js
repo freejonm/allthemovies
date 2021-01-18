@@ -4,7 +4,7 @@ var movies = [
    review: "a fun romp. kids love and are terrified by it. adults remember being kids." },
   {title: "breathless",
    rating: "4",
-   review: "bonnie et clyde. she's a winner, he's a loser, but you can't foool the paris police." },
+   review: "bonnie et clyde. she's a winner, he's a loser, but you can't fool the paris police." },
   {title: "dazed+and+confused",
    rating: "5",
    review: "come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." }
@@ -27,6 +27,7 @@ function renderCards(){
               "<div class = card><div class = card body><h5 id = card-title>" + response.Title +
               "</h5><p id=year>" + response.Year + 
               "</p><p id=director>" + response.Director +
+              "</p><p id=cast>" + response.Actors +
               "</p><p id=rating>" + element.rating + "/5"+
               "</p><p class = card-text>"+element.review+"</p></div></div>"
               );
