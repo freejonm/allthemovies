@@ -3,7 +3,8 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color:black;
+    color: white;
     text-align: center;
     padding: 50px;
 }
@@ -16,12 +17,17 @@ ul {
     width: 100%;
 }
 
-.card-title {
-    font-weight: bold;
-    font-size: larger;
-    margin-bottom: 2px;
-    padding: 0px;
-   
+.card-info {
+    color: black;
+}
+#card-title {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-style: italic;
+    
+    padding: 20px;
 }
 
 .release {
