@@ -36,6 +36,7 @@ function renderCards(){
               "</p><p class=APIinfo id=year>" + response.Year + 
               "</p><p class=APIinfo id=director>" + response.Director +
               "</p><p class=APIinfo id=cast>" + response.Actors +
+              "</p><p class=APIinfo id=plot>" + response.Plot +
               "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
               "</p><p id=review>"+element.review+"</p></div></div>"
               );
