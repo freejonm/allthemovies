@@ -49,7 +49,7 @@ function renderCards(){
   renderCards();
   
   // ADD NAVBAR
-  
+
   // ADD USERS
   // create user handler
   // users can add and save their own reviews by entering the name of a movie in a search field

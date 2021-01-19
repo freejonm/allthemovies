@@ -19,17 +19,20 @@ body {
     width: 100%;
     text-transform: lowercase;
     margin: 20px;
+    border-radius: 10px;
    
 }
 
 
 .APIinfo {
-    background-color: #a2adb8;
+    background-color: #3498DB;
     text-align: left;
     font-size: small;
     line-height: .25px;
     padding-left: 20px;
     overflow-wrap: break-word;
+    border-radius: 10px;
+    
 }
 
 
@@ -40,7 +43,6 @@ body {
 
 
 #card-title {
-    background-color: #a2adb8;
     color: white;
     font-weight: bold;
     font-size: large;
