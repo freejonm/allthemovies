@@ -23,9 +23,10 @@ body {
 
 .APIinfo {
     background-color: #a2adb8;
-    text-align: right;
+    text-align: left;
     font-size: small;
     margin-top: 0px;
+    line-height: 0px;
 }
 
 
@@ -41,10 +42,14 @@ body {
     font-weight: bold;
     font-size: large;
     text-align: right;
+    line-height: 20px;
+    
 }
 
 #plot {
     text-align: center;
     font-size: medium;
+    line-height: 20px;
+    padding: 50px;
 }
 
