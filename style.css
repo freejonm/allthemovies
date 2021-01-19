@@ -18,6 +18,7 @@ body {
 .card {
     width: 100%;
     text-transform: lowercase;
+    margin-bottom: 20px;
 }
 
 
@@ -25,14 +26,14 @@ body {
     background-color: #a2adb8;
     text-align: left;
     font-size: small;
-    margin-top: 0px;
     line-height: 0px;
+    padding-left: 20px;
 }
 
 
 .my-info {
     color: black;
-    text-align: left;
+    text-align: center;
 }
 
 
@@ -43,6 +44,7 @@ body {
     font-size: large;
     text-align: left;
     line-height: 20px;
+    padding: 20px;
     
 }
 
@@ -50,6 +52,6 @@ body {
     text-align: center;
     font-size: medium;
     line-height: 20px;
-    padding: 50px;
+    padding: 20px;
 }
 
