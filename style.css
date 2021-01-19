@@ -43,7 +43,7 @@ body {
     text-align: center;
     border: 1px solid #3498DB;
     border-radius: 10px;
-    padding: 20px
+    padding: 20px;
 }
 
 
@@ -54,7 +54,7 @@ body {
     text-decoration: underline; 
     text-align: left;
     line-height: 20px;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 0px 20px;
     
 }
 
