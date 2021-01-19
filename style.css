@@ -15,10 +15,11 @@ body {
     background-color: #a2adb8;
 }
 
+
+
 .card {
     width: 100%;
     text-transform: lowercase;
-  
     border-radius: 10px;
    
 }
@@ -56,10 +57,14 @@ body {
     
 }
 
+#cast {
+    overflow-inline: hidden;
+}
 #plot {
     text-align: center;
     font-size: medium;
     line-height: 20px;
     padding: 20px;
 }
+
 
