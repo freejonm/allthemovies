@@ -32,8 +32,8 @@ function renderCards(){
             console.log(response);
             // append cards
             $("body").append(
-              "<div class = card><div class = card-body><div class=APIinfo><p id = card-title>" + response.Title +
-              "</p><p class=APIinfo id=year>" + response.Year + 
+              "<div class = card><div class = card-body><div class=APIinfo><p id = card-title>" + response.Title + " (" + response.Year + ")" +
+              
               "</p><p class=APIinfo id=director>" + response.Director +
               "</p><p class=APIinfo id=cast>" + response.Actors +
               "</p><p class=APIinfo id=plot>" + response.Plot +
