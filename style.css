@@ -18,7 +18,7 @@ body {
 .card {
     width: 100%;
     text-transform: lowercase;
-    margin: 20px;
+  
     border-radius: 10px;
    
 }
@@ -39,6 +39,9 @@ body {
 .my-info {
     color: black;
     text-align: center;
+    border: 1px solid #3498DB;
+    border-radius: 10px;
+    padding: 20px
 }
 
 
