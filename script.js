@@ -39,7 +39,7 @@ function renderCards(){
               "</p><p class=APIinfo id=cast>cast: " + response.Actors +
               "</p><p class=APIinfo id=plot>" + response.Plot +
               "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
-              "</p><p id=review>"+element.review+"</p></div></div>"
+              "</p><p id=review>"+element.review+"</p></div></div>></div>"
               );
           })
         ))
@@ -47,7 +47,9 @@ function renderCards(){
       };
 
   renderCards();
-
+  
+  // ADD NAVBAR
+  
   // ADD USERS
   // create user handler
   // users can add and save their own reviews by entering the name of a movie in a search field
