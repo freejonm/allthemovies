@@ -14,7 +14,7 @@ var movies = [
   
   {title: "jurassic+park",
    rating: "3",
-   review: "a fun romp. kids love and are terrified by it. adults remember being kids." },
+   review: "most kids will love/be terrified by it. most adults will remember being kids." },
   
 ]
 
