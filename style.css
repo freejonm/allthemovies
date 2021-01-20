@@ -10,16 +10,16 @@ body {
 }
 
 .my-profile {
-    width: 60%;
     background-color: white;
-    height: auto;
     color: black;
     border: 1px solid #3498DB;
+   
+    padding: 20px; 
+    float: left;
 
 }
 .input-container {
-    margin: 40px;
-    width: 40%;
+   
     background-color: white;
     padding: 20px;
     color: black;
