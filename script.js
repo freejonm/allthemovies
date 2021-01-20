@@ -31,7 +31,7 @@ function renderCards(){
           }).then(function(response) {
             console.log(response);
             // append cards
-            $("body").append(
+            $(".movie-cards").append(
               "<div class=container><div class=card><div class=card-body><div class=text-center id=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
               "</p><p class=card-text id=genre>genre: " + response.Genre +
               "</p><p class=card-text id=country>country: " + response.Country +
@@ -46,7 +46,7 @@ function renderCards(){
       
       };
 
-  // renderCards();
+  renderCards();
   
   // ADD NAVBAR
 
