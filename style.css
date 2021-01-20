@@ -1,6 +1,7 @@
 * {
     font-family: 'Lato', sans-serif;;
     letter-spacing: 1px;
+    text-transform: lowercase;
 }
 
 body {
@@ -37,21 +38,27 @@ body {
 .form-control {
     border: 1px solid #3498DB;
 }
+
 #top-line {
     font-size: xx-large;
     font-weight: bolder;
     background-color: #a2adb8;
 }
 
+.container{
+    width: 100%;
+    margin: 5px;
+}
 
 .card {
     text-transform: lowercase;
     border-radius: 5px;
-    margin-bottom: 5px;
   
+    margin-bottom: 5px;
+    border: 1px solid #3498DB;
+    width: 100%;
    
 }
-
 
 #card-text {
     background-color: #3498DB;
@@ -96,4 +103,9 @@ body {
 
 #rating {
     font-weight: bolder;
+}
+
+#submit {
+    background-color: #3498DB;
+    border: none;
 }
