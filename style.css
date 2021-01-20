@@ -9,23 +9,28 @@ body {
     text-align: center;
 }
 
+.grid-container {
+    margin: 10px;
+}
+
 .my-profile {
     background-color: white;
     color: black;
     border: 1px solid #3498DB;
-   
+    margin: 5px;
+    border-radius: 5px;
     padding: 20px; 
-    float: left;
+    text-align: left;
+ 
 
 }
 .input-container {
-   
     background-color: white;
     padding: 20px;
     color: black;
     border-radius: 5px;
     border: 1px solid #3498DB;
-    float: right;
+    margin: 5px;
 
 }
 
