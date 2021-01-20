@@ -11,7 +11,8 @@ body {
 }
 
 .grid-container {
-    margin: 10px;
+    margin: 100px;
+    
 }
 
 .my-profile {
@@ -33,7 +34,6 @@ body {
     border: 1px solid #3498DB;
     margin: 5px;
     height: 90%;
-
 }
 
 .form-control {
@@ -49,13 +49,10 @@ body {
 
 
 .card {
-    text-transform: lowercase;
     border-radius: 5px;
-    margin: 5px;
-  
     border: 1px solid #3498DB;
-    width: 100%;
-   
+    float: left;
+    margin: 5px;
 }
 
 #card-text {
@@ -67,9 +64,9 @@ body {
     max-width: 100%;
 }
 
-.col-md-12 {
+.col-md-6 {
     margin-top: 5px;
-    width: 100%;
+
 }
 
 .my-info {
