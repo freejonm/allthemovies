@@ -5,13 +5,17 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: white;
     color: white;
     text-align: center;
 }
 
 .grid-container {
-    margin: 100px;
+    margin: 150px; 
+    padding: 50px; 
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
     
 }
 
@@ -21,7 +25,7 @@ body {
     border: 1px solid #3498DB;
     margin: 5px;
     border-radius: 5px;
-    padding: 20px; 
+    /* padding: 20px;  */
     text-align: left;
     height: 90%;
 
@@ -40,14 +44,6 @@ body {
     border: 1px solid #3498DB;
 }
 
-#top-line {
-    font-size: xx-large;
-    font-weight: bolder;
-    background-color: #a2adb8;
-}
-
-
-
 .card {
     border-radius: 5px;
     border: 1px solid #3498DB;
@@ -62,11 +58,6 @@ body {
     padding-left: 20px;
     border-radius: 10px;
     max-width: 100%;
-}
-
-.col-md-6 {
-    margin-top: 5px;
-
 }
 
 .my-info {
@@ -89,9 +80,6 @@ body {
     
 }
 
-#cast {
-    overflow-inline: hidden;
-}
 
 #plot {
     text-align: center;
