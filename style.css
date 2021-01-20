@@ -22,7 +22,7 @@ body {
     border-radius: 5px;
     padding: 20px; 
     text-align: left;
- 
+    height: 100%;
 
 }
 .input-container {
@@ -45,16 +45,13 @@ body {
     background-color: #a2adb8;
 }
 
-.container{
-    width: 100%;
-    margin: 5px;
-}
+
 
 .card {
     text-transform: lowercase;
     border-radius: 5px;
-  
-    margin-bottom: 5px;
+    margin: 5px;
+    
     border: 1px solid #3498DB;
     width: 100%;
    
@@ -69,11 +66,14 @@ body {
     max-width: 100%;
 }
 
+.col-md-6 {
+    margin-top: 5px;
+}
 
 .my-info {
     color: black;
     text-align: center;
-    border: 1px solid whitesmoke;
+    border: 1px solid #3498DB;
     border-radius: 10px;
     padding: 20px;
 }
