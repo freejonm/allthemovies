@@ -9,6 +9,13 @@ body {
     text-align: center;
 }
 
+.input-container {
+    margin: 40px;
+    width: 40%;
+    background-color: white;
+    padding: 20px;
+
+}
 #top-line {
     font-size: xx-large;
     font-weight: bolder;
@@ -16,25 +23,22 @@ body {
 }
 
 
-
 .card {
-    width: 100%;
     text-transform: lowercase;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  
    
 }
 
 
-.card-text {
+#card-text {
     background-color: #3498DB;
-    text-align: center;
     font-size: small;
-    line-height: .25px;
+    line-height: 1px;
     padding-left: 20px;
     border-radius: 10px;
-    word-wrap: break-word;
+    max-width: 100%;
 }
 
 

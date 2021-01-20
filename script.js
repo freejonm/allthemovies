@@ -32,21 +32,21 @@ function renderCards(){
             console.log(response);
             // append cards
             $("body").append(
-              "<div class=container><div class = card><div class = card-body><div class=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
+              "<div class=container><div class=card><div class=card-body><div class=text-center id=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
               "</p><p class=card-text id=genre>genre: " + response.Genre +
               "</p><p class=card-text id=country>country: " + response.Country +
               "</p><p class=card-text id=director>dir: " + response.Director +
               "</p><p class=card-text id=cast>cast: " + response.Actors +
               "</p><p class=card-text id=plot>" + response.Plot +
               "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
-              "</p><p id=review>"+element.review+"</p></div></div>></div></div>"
+              "</p><p id=review>"+element.review+"</p></div></div></div>"
               );
           })
         ))
       
       };
 
-  renderCards();
+  // renderCards();
   
   // ADD NAVBAR
 
