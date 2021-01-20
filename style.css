@@ -9,12 +9,28 @@ body {
     text-align: center;
 }
 
+.my-profile {
+    width: 60%;
+    background-color: white;
+    height: auto;
+    color: black;
+    border: 1px solid #3498DB;
+
+}
 .input-container {
     margin: 40px;
     width: 40%;
     background-color: white;
     padding: 20px;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #3498DB;
+    float: right;
 
+}
+
+.form-control {
+    border: 1px solid #3498DB;
 }
 #top-line {
     font-size: xx-large;
