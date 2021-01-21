@@ -16,6 +16,7 @@ body {
 .navbar-brand {
     font-size: xx-large;
     font-weight: bolder;
+    background-color: #3498DB;
 }
 .grid-container {
     margin: 150px; 
