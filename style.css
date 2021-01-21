@@ -48,6 +48,7 @@ body {
 #profile-pic {
     width: 50%;
     height: auto;
+    border-radius: 5px;
 }
 .input-container {
     background-color: white;
