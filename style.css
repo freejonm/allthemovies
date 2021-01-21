@@ -12,17 +12,20 @@ body {
 
 .navbar {
     background-color: #3498DB;
+    text-align: center;
     
 
 }
 .navbar-brand {
     font-size: 50px;
     font-weight: bolder;
-
     color: white;
+    margin: 10px;
+    
 }
+
 .grid-container {
-    margin: 150px; 
+    margin: 50px; 
     padding: 50px; 
     border: 1px solid whitesmoke;
     border-radius: 5px;
