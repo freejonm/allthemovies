@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: white;
-    color: white;
+    
+    background-color: #DCF1FB;
     text-align: center;
 }
 
@@ -43,6 +43,11 @@ body {
     text-align: left;
     height: 90%;
 
+}
+
+#profile-pic {
+    width: 25%;
+    height: auto;
 }
 .input-container {
     background-color: white;
