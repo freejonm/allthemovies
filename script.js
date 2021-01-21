@@ -18,7 +18,7 @@ var movies = [
   
 ]
 
-
+// add new movies to array through ui
 
 function renderCards(){
 
@@ -48,7 +48,7 @@ function renderCards(){
 
   renderCards();
   
-  // ADD NAVBAR
+
 
   // ADD USERS
   // create user handler
