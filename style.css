@@ -10,6 +10,9 @@ body {
     text-align: center;
 }
 
+.navbar {
+    background-color: #3498DB;
+}
 .navbar-brand {
     font-size: xx-large;
     font-weight: bolder;
