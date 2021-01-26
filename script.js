@@ -84,9 +84,14 @@ $("#submit").click(function(){
 
 $("#show-movies").click(function(){
   console.log("show movies!")
-  $("#buttons").append("<button type=button class= btn btn-primary btn-lg btn-block id=hide-movies>Hide my movies</button>");
+  $("#buttons").append("<button type=button class=btn btn-primary btn-lg btn-block id=hide-movies>Hide my movies</button>");
   renderCards();
 });
+
+$("#hide-movies").click(function(){
+  console.log("hide movies!");
+  $("#movie-cards").empty();
+})
 
  
   
