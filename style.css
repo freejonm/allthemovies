@@ -129,5 +129,13 @@ body {
 
 #show-movies {
     background-color: #3498DB;
-   
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+#hide-movies {
+    color: #3498DB;
+    background-color: white;
+    border: 1px solid #3498DB;
+    border-radius: 10px
 }
