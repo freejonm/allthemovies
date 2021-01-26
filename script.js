@@ -18,18 +18,21 @@ var movies = [
   
 ]
 
+// empty array for local storage
 var myMovies = [];
 
 function saveMyMovies(){
 
+  // getting user input
   var myTitle = $("#movie-title").val();
   var myRating = $("#my-rating").val();
   var myReview = $("#my-review").val();
 
-  
+  // getting array of objects from local storage or creating a new one if there is none
   var stringMyMovies = localStorage.getItem("MyMovies") || "[]";
   var parsedMyMovies= JSON.parse(stringMyMovies);
 
+  // building myMovie object with user inputs
   var myMovie = {};
   myMovie.title = myTitle;
   myMovie.rating = myRating;
@@ -45,6 +48,7 @@ function saveMyMovies(){
 $("#submit").click(function(){
   console.log("submit button!")
   saveMyMovies();
+  window.location.reload();
 });
 
 
