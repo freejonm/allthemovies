@@ -70,8 +70,8 @@ function renderCards(){
               "</p><p class=card-text id=genre>genre: " + response.Genre +
               "</p><p class=card-text id=country>country: " + response.Country +
               "</p><p class=card-text id=director>dir: " + response.Director +
-              "</p><p class=card-text id=cast>cast: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class-card-text id=cast>" + castArray[2] + ", " + castArray[3] +
-              "</p><p class=card-text id=plot>" + response.Plot +
+              "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class-card-text id=cast>" + castArray[2] + ", " + castArray[3] +
+              ".</p><p class=card-text id=plot>" + response.Plot +
               "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
               "</p><p id=review>"+element.review+"</p></div></div>"
               );
