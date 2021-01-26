@@ -18,6 +18,36 @@ var movies = [
   
 ]
 
+var myMovies = [];
+
+function saveMyMovies(){
+
+  var myTitle = $("#movie-title").val();
+  var myRating = $("#my-rating").val();
+  var myReview = $("#my-review").val();
+
+  
+  var stringMyMovies = localStorage.getItem("MyMovies") || "[]";
+  var parsedMyMovies= JSON.parse(stringMyMovies);
+
+  var myMovie = {};
+  myMovie.title = myTitle;
+  myMovie.rating = myRating;
+  myMovie.review = myReview;
+
+  parsedMyMovies.push(myMovie);
+  var stringifiedMyMovies = JSON.stringify(parsedMyMovies);
+
+  localStorage.setItem("MyMovies", stringifiedMyMovies);
+
+}
+
+$("#submit").click(function(){
+  console.log("submit button!")
+  saveMyMovies();
+});
+
+
 // add new movies to array through ui
 
 function renderCards(){
@@ -26,7 +56,7 @@ function renderCards(){
 
       // call OMDB API
       $.ajax({
-            url: "https://www.omdbapi.com/?t=" + element.title +"&y=&plot=short&apikey=c2a157c7",
+            url: "https://www.omdbapi.com/?t=" + element.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
             method: "GET"
           }).then(function(response) {
             console.log(response);
