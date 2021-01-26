@@ -58,15 +58,14 @@ body {
     border: 1px solid #3498DB;
 }
 
-.col-md-8 {
-    float: right;
-}
+
 
 .card {
     border-radius: 5px;
     border: 1px solid #3498DB;
     float: none;
-    margin: 5px;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 
@@ -80,8 +79,9 @@ body {
 }
 
 #movie-cards {
-    margin-top: 100px;
+    margin-top: 50px;
 }
+
 #profile-pic {
     width: 50%;
     height: auto;
@@ -137,5 +137,7 @@ body {
     color: #3498DB;
     background-color: white;
     border: 1px solid #3498DB;
-    border-radius: 10px
+    border-radius: 10px;
+    font-size: large;
+    padding: 10px;
 }
