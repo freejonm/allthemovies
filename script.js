@@ -60,11 +60,12 @@ function renderCards(){
             method: "GET"
           }).then(function(response) {
             console.log(response);
-            // append cards
+            
+            // build array out of Actors string from API
             var cast = response.Actors;
             castArray = cast.split(",");
 
-
+            // append cards
             $("#movie-cards").append(
               "<div class=card><div class=card-body><div class=text-center id=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
               "</p><p class=card-text id=genre>genre: " + response.Genre +
@@ -88,7 +89,7 @@ $("#submit").click(function(){
 
 $("#show-movies").click(function(){
   console.log("show movies!")
-  $("#buttons").append("<button type=button class=btn btn-primary btn-lg btn-block id=hide-movies>Hide my movies</button>");
+
   renderCards();
 });
 

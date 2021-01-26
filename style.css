@@ -131,6 +131,7 @@ body {
     background-color: #3498DB;
     margin-bottom: 15px;
     border-radius: 10px;
+    width: 100%;
 }
 
 #hide-movies {
@@ -139,5 +140,6 @@ body {
     border: 1px solid #3498DB;
     border-radius: 10px;
     font-size: large;
-    padding: 10px;
+
+    width: 100%;
 }
