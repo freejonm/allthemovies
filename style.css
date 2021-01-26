@@ -6,14 +6,12 @@
 
 body {
     
-    background-color: #DCF1FB;
+    background-color:  white;
     text-align: center;
 }
 
 .navbar {
     background-color: #3498DB;
-    
-    
 
 }
 .navbar-brand {
@@ -70,7 +68,7 @@ body {
 .card {
     border-radius: 5px;
     border: 1px solid #3498DB;
-    float: right;
+    float: left;
     margin: 5px;
 }
 
@@ -125,4 +123,5 @@ body {
 
 #show-movies {
     background-color: #3498DB;
+   
 }
