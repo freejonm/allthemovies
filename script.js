@@ -45,11 +45,7 @@ function saveMyMovies(){
 
 }
 
-$("#submit").click(function(){
-  console.log("submit button!")
-  saveMyMovies();
-  window.location.reload();
-});
+
 
 
 // add new movies to array through ui
@@ -80,7 +76,18 @@ function renderCards(){
       
       };
 
+$("#submit").click(function(){
+    console.log("submit button!")
+    saveMyMovies();
+    window.location.reload();
+});
+
+$("#show-movies").click(function(){
+  console.log("show movies!")
   renderCards();
+});
+
+ 
   
 
 

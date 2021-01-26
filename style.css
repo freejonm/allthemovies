@@ -122,3 +122,7 @@ body {
     border: none;
     margin-bottom: 5px;
 }
+
+#show-movies {
+    background-color: #3498DB;
+}
