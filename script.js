@@ -1,4 +1,7 @@
-var movies = [
+
+// database 
+var movies = 
+[
   {title: "breathless",
    rating: "4",
    review: "bonnie et clyde. she's a winner, he's a loser, but you can't fool the paris police." },
@@ -21,6 +24,9 @@ var movies = [
 // empty array for local storage
 var myMovies = [];
 
+// functions
+
+// users create their own database
 function saveMyMovies(){
 
   // getting user input
@@ -42,15 +48,9 @@ function saveMyMovies(){
   var stringifiedMyMovies = JSON.stringify(parsedMyMovies);
 
   localStorage.setItem("MyMovies", stringifiedMyMovies);
-
 }
 
-
-
-
-// add new movies to array through ui
-
-function renderCards(){
+function renderMovies(){
 
     movies.forEach(element => (
 
@@ -81,18 +81,36 @@ function renderCards(){
       
       };
 
+// pull from local memory
+function pullMemory(){
+  var memory = localStorage.getItem("MyMovies");
+  console.log(memory);
+  var parsedMemory = JSON.parse(memory);
+  console.log(parsedMemory);
+
+  parsedMemory.forEach(element => (
+    console.log(element.title)
+  ))
+}
+
+pullMemory();
+
+// buttons
+
+// click to save movies
 $("#submit").click(function(){
     console.log("submit button!")
     saveMyMovies();
     window.location.reload();
 });
 
+// render movie cards
 $("#show-movies").click(function(){
   console.log("show movies!")
-
-  renderCards();
+  renderMovies();
 });
 
+// hide movie cards
 $("#hide-movies").click(function(){
   console.log("hide movies!");
   $("#movie-cards").empty();
