@@ -84,6 +84,7 @@ $("#submit").click(function(){
 
 $("#show-movies").click(function(){
   console.log("show movies!")
+  $("#buttons").append("<button type=button class= btn btn-primary btn-lg btn-block id=hide-movies>Hide my movies</button>");
   renderCards();
 });
 
@@ -91,10 +92,4 @@ $("#show-movies").click(function(){
   
 
 
-  // ADD USERS
-  // create user handler
-  // users can add and save their own reviews by entering the name of a movie in a search field
-
-  // USER STATS
-  // categorize user by taste in movies using user ratings compared to imdb votes
-  // show user's favorite genre by averaging ratings within genre
+  
