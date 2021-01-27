@@ -35,7 +35,8 @@ function checkMovie(){
     method: "GET"
   }).then(function(response){
     console.log(response);
-    if (response.response === "False"){
+
+    if (Object.keys(response).includes("Error")){
       $("#exampleModalLongTitle").text("ERROR!!!!!!");
       $(".modal-body").text("Movie title not found. Please double-check that you have the correct title and try again.")
     }
@@ -45,7 +46,6 @@ function checkMovie(){
     $(".modal-body").append("<img src="+response.Poster+"></img>")
   }
     
-    // text(response.Title + " released in " + response.Year + " directed by " + response.Director);
   })
 
   
