@@ -37,8 +37,9 @@ function checkMovie(){
     console.log(response);
 
     if (Object.keys(response).includes("Error")){
-      $("#exampleModalLongTitle").text("ERROR!!!!!!");
-      $(".modal-body").text("Movie title not found. Please double-check that you have the correct title and try again.")
+      $(".modal-footer").empty();
+      $("#exampleModalLongTitle").text("whoops!");
+      $(".modal-body").text("We couldn't find a movie with that title. Please double-check that you have the correct title (and spelling) and try again.")
     }
 
     else{
