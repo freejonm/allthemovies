@@ -30,8 +30,12 @@ function checkMovie(){
 
   var title = $("#movie-title").val();
 
+  var fixedTitle = title.replace(/\s/g, "+");
+
+  console.log(fixedTitle);
+
   $.ajax({
-    url: "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
+    url: "https://www.omdbapi.com/?t=" + fixedTitle + "&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
     method: "GET"
   }).then(function(response){
     console.log(response);
@@ -47,11 +51,10 @@ function checkMovie(){
     $(".modal-body").empty();
     $(".modal-body").append("<img src="+response.Poster+"></img>")
   }
+
+
     
   })
-
-  
-
 
 }
 // users create their own database
