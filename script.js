@@ -26,6 +26,19 @@ var myMovies = [];
 
 // functions
 
+function checkMovie(){
+
+  var title = $("#movie-title").val();
+
+  $.ajax({
+    url: "https://www.omdbapi.com/?t=" + title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
+    method: "GET"
+  }).then(function(response){
+    console.log(response);
+  })
+
+
+}
 // users create their own database
 function saveMyMovies(){
 
@@ -82,7 +95,7 @@ function renderMovies(){
       
       };
 
-// pull from local memory
+// pull from local memory and append cards based on user database
 function pullMemory(){
   var memory = localStorage.getItem("MyMovies");
   console.log(memory);
@@ -125,7 +138,8 @@ function pullMemory(){
 // click to save movies
 $("#submit").click(function(){
     $("#movie-title").text("placeholder");
-    saveMyMovies();
+    checkMovie();
+    // saveMyMovies();
     window.location.reload();
 });
 
