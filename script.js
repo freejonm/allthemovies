@@ -32,8 +32,6 @@ function checkMovie(){
 
   var fixedTitle = title.replace(/\s/g, "+");
 
-  console.log(fixedTitle);
-
   $.ajax({
     url: "https://www.omdbapi.com/?t=" + fixedTitle + "&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
     method: "GET"
@@ -43,13 +41,19 @@ function checkMovie(){
     if (Object.keys(response).includes("Error")){
       $(".modal-footer").empty();
       $("#exampleModalLongTitle").text("whoops!");
-      $(".modal-body").text("We couldn't find a movie with that title. Please double-check that you have the correct title (and spelling) and try again.")
+      $(".modal-body").text("We couldn't find a movie with that title. Please double-check that you have the correct title (and spelling) and try again.");
+     
     }
 
     else{
     $("#exampleModalLongTitle").text("Is this the movie you are looking for?")
     $(".modal-body").empty();
     $(".modal-body").append("<img src="+response.Poster+"></img>")
+
+    $("#modal-confirm").click(function(){
+      $("#exampleModalCenter").modal("hide");
+      $("#check-movie").text("Movie found!").css("background-color", "#3498DB").css("color", "white");
+    })
   }
 
 
@@ -164,10 +168,9 @@ $("#check-movie").click(function(){
 // click to save movies
 $("#submit").click(function(){
     $("#movie-title").text("placeholder");
-   
     saveMyMovies();
     window.location.reload();
-});
+  });
 
 // render movie cards
 $("#show-movies").click(function(){
