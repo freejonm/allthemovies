@@ -26,19 +26,19 @@ var myMovies = [];
 
 // functions
 
-function checkMovie(){
+// function checkMovie(){
 
-  var title = $("#movie-title").val();
+//   var title = $("#movie-title").val();
 
-  $.ajax({
-    url: "https://www.omdbapi.com/?t=" + title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
-    method: "GET"
-  }).then(function(response){
-    console.log(response);
-  })
+//   $.ajax({
+//     url: "https://www.omdbapi.com/?t=" + title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
+//     method: "GET"
+//   }).then(function(response){
+//     console.log(response);
+//   })
 
 
-}
+// }
 // users create their own database
 function saveMyMovies(){
 
@@ -138,8 +138,8 @@ function pullMemory(){
 // click to save movies
 $("#submit").click(function(){
     $("#movie-title").text("placeholder");
-    checkMovie();
-    // saveMyMovies();
+   
+    saveMyMovies();
     window.location.reload();
 });
 
