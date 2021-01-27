@@ -46,6 +46,7 @@ function checkMovie(){
     $("#exampleModalCenter").modal({show: true});
     $(".modal-body").empty();
     $(".modal-body").append("<img src="+response.Poster+"></img>")
+    $(".modal-body").append("<p>" + response.Title + " released in " + response.Year + " directed by " + response.Director + " starring " + response.Actors + "</p>");
 
     $("#modal-confirm").click(function(){
       $("#exampleModalCenter").modal("hide");
