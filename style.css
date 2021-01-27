@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    background-color: #3498DB;
+    background-color: black;
 
 }
 
@@ -35,7 +35,7 @@ body {
 .my-profile {
     background-color: white;
     color: black;
-    border: 1px solid #3498DB;
+    border: 1px solid black;
     margin: 5px;
     border-radius: 5px;
     padding: 20px; 
@@ -49,20 +49,20 @@ body {
     padding: 20px;
     color: black;
     border-radius: 5px;
-    border: 1px solid #3498DB;
+    border: 1px solid black;
     margin: 5px;
     height: 90%;
 }
 
 .form-control {
-    border: 1px solid #3498DB;
+    border: 1px solid black;
 }
 
 
 
 .card {
     border-radius: 5px;
-    border: 1px solid #3498DB;
+    border: 1px solid black;
     float: none;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -73,7 +73,7 @@ body {
 .my-info {
     color: black;
     text-align: center;
-    border: 1px solid #3498DB;
+    border: 1px solid black;
     border-radius: 10px;
     padding: 20px;
 }
@@ -92,7 +92,7 @@ body {
 
 
 #card-text {
-    background-color: #3498DB;
+    background-color: black;
     font-size: x-small;
     line-height: 1px;
     padding-left: 20px;
@@ -126,22 +126,23 @@ body {
 
 
 #submit {
-    background-color: #3498DB;
+    background-color: black;
     border: none;
     margin: 20px;
 }
 
 #show-movies {
-    background-color: #3498DB;
+    background-color: black;
+    border: none;
     margin-bottom: 15px;
     border-radius: 10px;
     width: 100%;
 }
 
 #hide-movies {
-    color: #3498DB;
+    color: black;
     background-color: white;
-    border: 1px solid #3498DB;
+    border: 1px solid black;
     border-radius: 10px;
     font-size: large;
 

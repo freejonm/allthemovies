@@ -50,7 +50,7 @@ function checkMovie(){
 
     $("#modal-confirm").click(function(){
       $("#exampleModalCenter").modal("hide");
-      $("#check-movie").text("Movie found!").css("background-color", "#3498DB").css("color", "white");
+      $("#check-movie").text("Movie found!").css("background-color", "black").css("color", "white");
     })
   }
 
