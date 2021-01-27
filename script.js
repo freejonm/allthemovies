@@ -138,7 +138,8 @@ function pullMemory(){
 // click to confirm movie
 $("#check-movie").click(function(){
   console.log("confirm click!");
-  checkMovie();
+  $("#exampleModalCenter").modal({show: true});
+  // checkMovie();
 });
 
 // click to save movies
