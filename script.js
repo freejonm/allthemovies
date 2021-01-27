@@ -50,6 +50,7 @@ function saveMyMovies(){
   localStorage.setItem("MyMovies", stringifiedMyMovies);
 }
 
+
 function renderMovies(){
 
     movies.forEach(element => (
@@ -88,12 +89,20 @@ function pullMemory(){
   var parsedMemory = JSON.parse(memory);
   console.log(parsedMemory);
 
+
   parsedMemory.forEach(element => (
-    console.log(element.title)
-  ))
+    
+    console.log(element.title),
+
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=" + element.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    }))   )
 }
 
-pullMemory();
+
 
 // buttons
 
@@ -107,7 +116,7 @@ $("#submit").click(function(){
 // render movie cards
 $("#show-movies").click(function(){
   console.log("show movies!")
-  renderMovies();
+  pullMemory();
 });
 
 // hide movie cards
