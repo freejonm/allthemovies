@@ -128,7 +128,7 @@ body {
 #submit {
     background-color: #3498DB;
     border: none;
-    margin-bottom: 5px;
+    margin: 20px;
 }
 
 #show-movies {
