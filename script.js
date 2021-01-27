@@ -42,6 +42,7 @@ function checkMovie(){
     }
 
     else{
+    $("#exampleModalLongTitle").text("Is this the movie you are looking for?")
     $(".modal-body").empty();
     $(".modal-body").append("<img src="+response.Poster+"></img>")
   }
@@ -76,37 +77,37 @@ function saveMyMovies(){
   localStorage.setItem("MyMovies", stringifiedMyMovies);
 }
 
+// code here was pre-user input driving API. keeping in case everything breaks. 
+// function renderMovies(){
 
-function renderMovies(){
+//     movies.forEach(element => (
 
-    movies.forEach(element => (
-
-      // call OMDB API
-      $.ajax({
-            url: "https://www.omdbapi.com/?t=" + element.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
-            method: "GET"
-          }).then(function(response) {
-            console.log(response);
+//       // call OMDB API
+//       $.ajax({
+//             url: "https://www.omdbapi.com/?t=" + element.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
+//             method: "GET"
+//           }).then(function(response) {
+//             console.log(response);
             
-            // build array out of Actors string from API
-            var cast = response.Actors;
-            castArray = cast.split(",");
+//             // build array out of Actors string from API
+//             var cast = response.Actors;
+//             castArray = cast.split(",");
 
-            // append cards
-            $("#movie-cards").append(
-              "<div class=card><div class=card-body><div class=text-center id=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
-              "</p><p class=card-text id=genre>genre: " + response.Genre +
-              "</p><p class=card-text id=country>country: " + response.Country +
-              "</p><p class=card-text id=director>dir: " + response.Director +
-              "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class-card-text id=cast>" + castArray[2] + ", " + castArray[3] +
-              ".</p><p class=card-text id=plot>" + response.Plot +
-              "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
-              "</p><p id=review>"+element.review+"</p></div></div>"
-              );
-          })
-        ))
+//             // append cards
+//             $("#movie-cards").append(
+//               "<div class=card><div class=card-body><div class=text-center id=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
+//               "</p><p class=card-text id=genre>genre: " + response.Genre +
+//               "</p><p class=card-text id=country>country: " + response.Country +
+//               "</p><p class=card-text id=director>dir: " + response.Director +
+//               "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class-card-text id=cast>" + castArray[2] + ", " + castArray[3] +
+//               ".</p><p class=card-text id=plot>" + response.Plot +
+//               "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
+//               "</p><p id=review>"+element.review+"</p></div></div>"
+//               );
+//           })
+//         ))
       
-      };
+//       };
 
 // pull from local memory and append cards based on user database
 function pullMemory(){
