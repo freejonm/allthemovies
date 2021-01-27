@@ -124,7 +124,7 @@ function pullMemory(){
 
 // click to save movies
 $("#submit").click(function(){
-    console.log("submit button!")
+    $("#movie-title").text("placeholder");
     saveMyMovies();
     window.location.reload();
 });
