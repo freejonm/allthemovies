@@ -39,14 +39,11 @@ function checkMovie(){
     console.log(response);
 
     if (Object.keys(response).includes("Error")){
-      $(".modal-footer").empty();
-      $("#exampleModalLongTitle").text("whoops!");
-      $(".modal-body").text("We couldn't find a movie with that title. Please double-check that you have the correct title (and spelling) and try again.");
-     
+      $("#errorModal").modal({show: true});
     }
 
     else{
-    $("#exampleModalLongTitle").text("Is this the movie you are looking for?")
+    $("#exampleModalCenter").modal({show: true});
     $(".modal-body").empty();
     $(".modal-body").append("<img src="+response.Poster+"></img>")
 
@@ -160,7 +157,6 @@ function pullMemory(){
 // click to confirm movie
 $("#check-movie").click(function(){
   console.log("confirm click!");
-  $("#exampleModalCenter").modal({show: true});
   checkMovie();
 
 });
