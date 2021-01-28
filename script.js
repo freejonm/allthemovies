@@ -1,6 +1,6 @@
 
 // database 
-var movies = 
+let movies = 
 [
   {title: "breathless",
    rating: "4",
@@ -22,15 +22,15 @@ var movies =
 ]
 
 // empty array for local storage
-var myMovies = [];
+let myMovies = [];
 
 // functions
 
 function checkMovie(){
 
-  var title = $("#movie-title").val();
+  let title = $("#movie-title").val();
 
-  var fixedTitle = title.replace(/\s/g, "+");
+  let fixedTitle = title.replace(/\s/g, "+");
 
   $.ajax({
     url: "https://www.omdbapi.com/?t=" + fixedTitle + "&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
@@ -63,22 +63,22 @@ function checkMovie(){
 function saveMyMovies(){
 
   // getting user input
-  var myTitle = $("#movie-title").val();
-  var myRating = $("#my-rating").val();
-  var myReview = $("#my-review").val();
+  let myTitle = $("#movie-title").val();
+  let myRating = $("#my-rating").val();
+  let myReview = $("#my-review").val();
 
   // getting array of objects from local storage or creating a new one if there is none
-  var stringMyMovies = localStorage.getItem("MyMovies") || "[]";
-  var parsedMyMovies= JSON.parse(stringMyMovies);
+  let stringMyMovies = localStorage.getItem("MyMovies") || "[]";
+  let parsedMyMovies= JSON.parse(stringMyMovies);
 
   // building myMovie object with user inputs
-  var myMovie = {};
+  let myMovie = {};
   myMovie.title = myTitle;
   myMovie.rating = myRating;
   myMovie.review = myReview;
 
   parsedMyMovies.push(myMovie);
-  var stringifiedMyMovies = JSON.stringify(parsedMyMovies);
+  let stringifiedMyMovies = JSON.stringify(parsedMyMovies);
 
   localStorage.setItem("MyMovies", stringifiedMyMovies);
 }
@@ -96,7 +96,7 @@ function saveMyMovies(){
 //             console.log(response);
             
 //             // build array out of Actors string from API
-//             var cast = response.Actors;
+//             let cast = response.Actors;
 //             castArray = cast.split(",");
 
 //             // append cards
@@ -117,9 +117,9 @@ function saveMyMovies(){
 
 // pull from local memory and append cards based on user database
 function pullMemory(){
-  var memory = localStorage.getItem("MyMovies");
+  let memory = localStorage.getItem("MyMovies");
   console.log(memory);
-  var parsedMemory = JSON.parse(memory);
+  let parsedMemory = JSON.parse(memory);
   console.log(parsedMemory);
 
 
@@ -133,8 +133,8 @@ function pullMemory(){
     }).then(function(response) {
       console.log(response);
 
-      var cast = response.Actors;
-      var castArray = cast.split(",");
+      let cast = response.Actors;
+      let castArray = cast.split(",");
       $(".modal-body").append("<img src="+response.Poster+"></img>")
       // append cards
       $("#movie-cards").append(
