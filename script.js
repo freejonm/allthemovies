@@ -86,11 +86,11 @@ function saveMyMovies(){
 // code here was pre-user input driving API. keeping in case everything breaks. 
 // function renderMovies(){
 
-//     movies.forEach(element => (
+//     movies.forEach(movie => (
 
 //       // call OMDB API
 //       $.ajax({
-//             url: "https://www.omdbapi.com/?t=" + element.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
+//             url: "https://www.omdbapi.com/?t=" + movie.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
 //             method: "GET"
 //           }).then(function(response) {
 //             console.log(response);
@@ -107,8 +107,8 @@ function saveMyMovies(){
 //               "</p><p class=card-text id=director>dir: " + response.Director +
 //               "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class-card-text id=cast>" + castArray[2] + ", " + castArray[3] +
 //               ".</p><p class=card-text id=plot>" + response.Plot +
-//               "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
-//               "</p><p id=review>"+element.review+"</p></div></div>"
+//               "</p></div><div class=my-info> <p id=rating>" + movie.rating + "/5"+
+//               "</p><p id=review>"+movie.review+"</p></div></div>"
 //               );
 //           })
 //         ))
@@ -123,12 +123,12 @@ function showMovies(){
   console.log(parsedMemory);
 
 
-  parsedMemory.forEach(element => (
+  parsedMemory.forEach(movie => (
     
-    console.log(element.title),
+    console.log(movie.title),
 
     $.ajax({
-      url: "https://www.omdbapi.com/?t=" + element.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
+      url: "https://www.omdbapi.com/?t=" + movie.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
       method: "GET"
     }).then(function(response) {
       console.log(response);
@@ -144,8 +144,8 @@ function showMovies(){
         "</p><p class=card-text id=director>dir: " + response.Director +
         "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class=card-text id=cast>" + castArray[2] + ", " + castArray[3] +
         ".</p><p class=card-text id=plot>" + response.Plot +
-        "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
-        "</p><p id=review>"+element.review+"</p></div><input class=butn btn-primary id=delete value=delete></div>"
+        "</p></div><div class=my-info> <p id=rating>" + movie.rating + "/5"+
+        "</p><p id=review>"+movie.review+"</p></div><input class=butn btn-primary id=delete value=delete></div>"
         );
 
     }))   )
