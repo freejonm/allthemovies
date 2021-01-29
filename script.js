@@ -41,10 +41,13 @@ function checkMovie(){
 // users create their own database
 function saveMyMovies(){
 
+
   // getting user input
   let myTitle = $("#movie-title").val();
   let myRating = $("#my-rating").val();
   let myReview = $("#my-review").val();
+
+  // getting API input
 
   // getting array of objects from local storage or creating a new one if there is none
   let stringMyMovies = localStorage.getItem("MyMovies") || "[]";
@@ -121,7 +124,7 @@ $("#submit").click(function(){
     $("#movie-title").empty();
     $("#add-movie").modal("hide");
     saveMyMovies();
-    // window.location.reload();
+    window.location.reload();
   });
 
 // render movie cards
