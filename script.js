@@ -40,7 +40,8 @@ function checkMovie(){
 }
 // users create their own database
 function saveMyMovies(){
-
+  let now = moment();
+  console.log(now);
 
   // getting user input
   let myTitle = $("#movie-title").val();
