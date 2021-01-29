@@ -1,7 +1,8 @@
 
 
 // empty array for local storage
-let myMovies = [];
+
+
 
 // functions
 
