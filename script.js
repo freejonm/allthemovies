@@ -131,7 +131,13 @@ $("#check-movie").click(function(){
 
 });
 
-// click to save movies
+// click to go to review adding movie
+$("#confirm-movie-yes").click(function(){
+  $("#confirm-movie").modal("hide");
+  $("#add-movie").modal({show: true});
+})
+
+// click to save movie
 $("#submit").click(function(){
     $("#movie-title").text("placeholder");
     saveMyMovies();
