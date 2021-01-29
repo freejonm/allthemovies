@@ -83,37 +83,6 @@ function saveMyMovies(){
   localStorage.setItem("MyMovies", stringifiedMyMovies);
 }
 
-// code here was pre-user input driving API. keeping in case everything breaks. 
-// function renderMovies(){
-
-//     movies.forEach(movie => (
-
-//       // call OMDB API
-//       $.ajax({
-//             url: "https://www.omdbapi.com/?t=" + movie.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
-//             method: "GET"
-//           }).then(function(response) {
-//             console.log(response);
-            
-//             // build array out of Actors string from API
-//             let cast = response.Actors;
-//             castArray = cast.split(",");
-
-//             // append cards
-//             $("#movie-cards").append(
-//               "<div class=card><div class=card-body><div class=text-center id=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
-//               "</p><p class=card-text id=genre>genre: " + response.Genre +
-//               "</p><p class=card-text id=country>country: " + response.Country +
-//               "</p><p class=card-text id=director>dir: " + response.Director +
-//               "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class-card-text id=cast>" + castArray[2] + ", " + castArray[3] +
-//               ".</p><p class=card-text id=plot>" + response.Plot +
-//               "</p></div><div class=my-info> <p id=rating>" + movie.rating + "/5"+
-//               "</p><p id=review>"+movie.review+"</p></div></div>"
-//               );
-//           })
-//         ))
-      
-//       };
 
 // pull from local memory and append cards based on user database
 function showMovies(){
@@ -145,7 +114,7 @@ function showMovies(){
         "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class=card-text id=cast>" + castArray[2] + ", " + castArray[3] +
         ".</p><p class=card-text id=plot>" + response.Plot +
         "</p></div><div class=my-info> <p id=rating>" + movie.rating + "/5"+
-        "</p><p id=review>"+movie.review+"</p></div><input class=butn btn-primary id=delete value=delete></div>"
+        "</p><p id=review>"+movie.review+"</p></div>"
         );
 
     }))   )
