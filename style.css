@@ -10,6 +10,10 @@ body {
     text-align: center;
 }
 
+.card-img-top {
+    padding : 5px;
+    border-radius: 5px;
+}
 .navbar {
     background-color: black;
 
@@ -24,7 +28,7 @@ body {
 }
 
 .grid-container {
-    margin: 0px 10px 0px 10px; 
+    margin: 0px 50px 0px 50px;
     padding: 50px; 
     border: 1px solid whitesmoke;
     border-radius: 5px;
@@ -111,6 +115,16 @@ body {
     line-height: 20px;
     padding: 20px 20px 0px 20px;
     
+}
+
+#delete {
+    background-color: black;
+    border: none;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 0px;
 }
 
 #plot {

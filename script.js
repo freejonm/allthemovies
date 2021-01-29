@@ -116,7 +116,7 @@ function saveMyMovies(){
 //       };
 
 // pull from local memory and append cards based on user database
-function pullMemory(){
+function showMovies(){
   let memory = localStorage.getItem("MyMovies");
   console.log(memory);
   let parsedMemory = JSON.parse(memory);
@@ -138,14 +138,14 @@ function pullMemory(){
       $(".modal-body").append("<img src="+response.Poster+"></img>")
       // append cards
       $("#movie-cards").append(
-        "<div class=card><img src="+response.Poster+"></img><div class=card-body><div class=text-center id=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
+        "<div class=card><img class=card-img-top src="+response.Poster+"></img><div class=card-body><div class=text-center id=card-text><p id = card-title>" + response.Title + " (" + response.Year + ")" +
         "</p><p class=card-text id=genre>genre: " + response.Genre +
         "</p><p class=card-text id=country>country: " + response.Country +
         "</p><p class=card-text id=director>dir: " + response.Director +
-        "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class-card-text id=cast>" + castArray[2] + ", " + castArray[3] +
+        "</p><p class=card-text id=cast>top-billed: " + castArray[0] + ", " + castArray[1] + ",</p>" + "<p class=card-text id=cast>" + castArray[2] + ", " + castArray[3] +
         ".</p><p class=card-text id=plot>" + response.Plot +
         "</p></div><div class=my-info> <p id=rating>" + element.rating + "/5"+
-        "</p><p id=review>"+element.review+"</p></div></div>"
+        "</p><p id=review>"+element.review+"</p></div><input class=butn btn-primary id=delete value=delete></div>"
         );
 
     }))   )
@@ -172,7 +172,7 @@ $("#submit").click(function(){
 // render movie cards
 $("#show-movies").click(function(){
   console.log("show movies!")
-  pullMemory();
+  showMovies();
 });
 
 // hide movie cards
