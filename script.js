@@ -1,25 +1,4 @@
 
-// database 
-let movies = 
-[
-  {title: "breathless",
-   rating: "4",
-   review: "bonnie et clyde. she's a winner, he's a loser, but you can't fool the paris police." },
-
-   {title: "dazed+and+confused",
-    rating: "5",
-    review: "come for the catchphrases, drugs, and rock and roll. stay for that summer (not) coming of age feeling." },
-
-   {title: "e.t.",
-    rating: "4.5",
-    review: "e.t. getting drunk is my whole asthetic."
-   },
-  
-  {title: "jurassic+park",
-   rating: "3",
-   review: "most kids will love/be terrified by it. most adults will remember being kids." },
-  
-]
 
 // empty array for local storage
 let myMovies = [];
