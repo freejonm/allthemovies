@@ -75,6 +75,11 @@ body {
     padding: 20px;
 }
 
+#check-movie {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
 
 #movie-cards {
     margin-top: 50px;
@@ -118,6 +123,10 @@ body {
     color: white;
     border-radius: 5px;
     margin-bottom: 0px;
+}
+
+#movie-title {
+    border-radius: 5px;
 }
 
 #plot {
