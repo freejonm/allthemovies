@@ -118,9 +118,10 @@ $("#confirm-movie-yes").click(function(){
 
 // click to save movie
 $("#submit").click(function(){
-    $("#movie-title").text("placeholder");
+    $("#movie-title").empty();
+    $("#add-movie").modal("hide");
     saveMyMovies();
-    window.location.reload();
+    // window.location.reload();
   });
 
 // render movie cards
