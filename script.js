@@ -59,6 +59,7 @@ function saveMyMovies(){
   myMovie.title = myTitle;
   myMovie.rating = myRating;
   myMovie.review = myReview;
+  myMovie.time = now._d; 
 
   parsedMyMovies.push(myMovie);
   let stringifiedMyMovies = JSON.stringify(parsedMyMovies);
