@@ -102,20 +102,20 @@ function showMovies(){
 // buttons 
 
 // click to confirm movie
-$("#check-movie").click(function(){
+$("#check-movie").click(()=>{
   console.log("confirm click!");
   checkMovie();
 
 });
 
 // click to go to review adding movie
-$("#confirm-movie-yes").click(function(){
+$("#confirm-movie-yes").click(()=>{
   $("#confirm-movie").modal("hide");
   $("#add-movie").modal({show: true});
 })
 
 // click to save movie
-$("#submit").click(function(){
+$("#submit").click(()=>{
     $("#movie-title").empty();
     $("#add-movie").modal("hide");
     saveMyMovies();
@@ -123,13 +123,13 @@ $("#submit").click(function(){
   });
 
 // render movie cards
-$("#show-movies").click(function(){
+$("#show-movies").click(()=>{
   console.log("show movies!")
   showMovies();
 });
 
 // hide movie cards
-$("#hide-movies").click(function(){
+$("#hide-movies").click(()=>{
   console.log("hide movies!");
   $("#movie-cards").empty();
 })
