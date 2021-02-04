@@ -88,7 +88,7 @@ function showMovies(){
 
       let cast = response.Actors;
       let castArray = cast.split(",");
-      $(".modal-body").append("<img src="+response.Poster+"></img>")
+      
       // append cards
       $("#movie-cards").append(
         `<div class=card><img class=card-img-top src=${response.Poster}></img><div class=card-body><div class=text-center id=card-text><p id = card-title>${ response.Title} ${response.Year}</p><p class=card-text id=genre>genre: ${response.Genre} </p><p class=card-text id=country>country: ${response.Country}</p><p class=card-text id=director>dir: ${response.Director}</p><p class=card-text id=cast>top-billed: ${castArray[0]}, ${castArray[1]},</p><p class=card-text id=cast>${castArray[2]}, ${castArray[3]}.</p><p class=card-text id=plot>${response.Plot}</p></div><div class=my-info> <p id=rating>${movie.rating}/5</p><p id=review>${movie.review}</p></div>`
