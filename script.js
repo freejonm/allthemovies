@@ -30,7 +30,6 @@ function checkMovie(){
 
     $("#modal-confirm").click(function(){
       $("#confirm-movie").modal("hide");
-      $("#check-movie").text("Movie found!").css("background-color", "black").css("color", "white");
     })
   }
 
