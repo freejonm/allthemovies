@@ -7,15 +7,15 @@
 // functions
 
 function checkMovie(){
-
+  // get title from input
   let title = $("#movie-title").val();
-
+  // replace spaces with + to match API phrasing
   let fixedTitle = title.replace(/\s/g, "+");
-
+  // API call
   $.ajax({
     url: "https://www.omdbapi.com/?t=" + fixedTitle + "&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
     method: "GET"
-  }).then(function(response){
+  }).then((response)=>{
     console.log(response);
 
     if (Object.keys(response).includes("Error")){
@@ -28,7 +28,7 @@ function checkMovie(){
     $("#modal-confirm-body").append(`<img src=${response.Poster}></img>`)
     $("#modal-confirm-body").append(`<p>${response.Title} released in ${response.Year}, directed by ${response.Director}, and starring ${response.Actors}</p>`);
 
-    $("#modal-confirm").click(function(){
+    $("#modal-confirm").click(()=>{
       $("#confirm-movie").modal("hide");
     })
   }
