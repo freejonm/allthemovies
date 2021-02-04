@@ -25,8 +25,8 @@ function checkMovie(){
     else {
     $("#confirm-movie").modal({show: true});
     $("#modal-confirm-body").empty();
-    $("#modal-confirm-body").append("<img src="+response.Poster+"></img>")
-    $("#modal-confirm-body").append("<p>" + response.Title + " released in " + response.Year + " directed by " + response.Director + " starring " + response.Actors + "</p>");
+    $("#modal-confirm-body").append(`<img src=${response.Poster}></img>`)
+    $("#modal-confirm-body").append(`<p>${response.Title} released in ${response.Year}, directed by ${response.Director}, and starring ${response.Actors}</p>`);
 
     $("#modal-confirm").click(function(){
       $("#confirm-movie").modal("hide");
