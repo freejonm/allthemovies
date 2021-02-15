@@ -17,7 +17,7 @@ function checkMovie(){
     method: "GET"
   }).then((response)=>{
     console.log(response);
-
+    // check for an error
     if (Object.keys(response).includes("Error")){
       $("#errorModal").modal({show: true});
     }
