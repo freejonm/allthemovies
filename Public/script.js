@@ -67,6 +67,22 @@ function saveMyMovies(){
   myMovie.review = myReview;
   myMovie.time = now._d; 
 
+  fetch('/api/movies', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(myMovie),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('add.html', data);
+      alert(`Adding movie: ${data.title}`);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
   parsedMyMovies.push(myMovie);
   let stringifiedMyMovies = JSON.stringify(parsedMyMovies);
 

@@ -7,12 +7,6 @@ const app = express();
 const PORT = 3030;
 
 const movies = [
-    {title: "Jaws",
-     director: "Stephen Spielberg",
-     cast: ["Richard Dreyfuss", "Roy Schneider"],
-     plot: "Shark terrorizes small town",
-     rating: 3,
-     review: "Yer gonna need a bigger boat."}
 ];
 
 // set up express to handle data parsing
@@ -27,6 +21,22 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public/index.html
 
 // sending movies array to server
 app.get('/api/movies', (req, res) => res.json(movies));
+
+// Create New Characters - takes in JSON input
+app.post('/api/movies', (req, res) => {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    const myMovie = req.body;
+  
+    // Using a RegEx Pattern to remove spaces from newCharacter
+    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    
+    console.log(myMovie);
+  
+    movies.push(myMovie);
+    res.json(myMovie);
+  });
+
 
 // listener
 app.listen(PORT, ()=>{console.log(`app listening on ${PORT}`)}); 
