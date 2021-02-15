@@ -24,10 +24,10 @@ function checkMovie(){
     $("#modal-confirm-body").append(`<img src=${response.Poster}></img>`)
     $("#modal-confirm-body").append(`<p>${response.Title}</p><p> released: ${response.Year}</p><p> dir: ${response.Director}</p><p>top billed: ${response.Actors}</p>`);
 
-    $("#my-title").text(`title: ${response.Title}`);
-    $("#year-released").text(`released: ${response.Year}`);
-    $("#director-name").text(`dir: ${response.Director}`);
-    $("#top-billed").text(`top-billed: ${response.Actors}`);
+    $("#my-title").text(response.Title);
+    $("#year-released").text(response.Year);
+    $("#director-name").text(response.Director);
+    $("#top-billed").text(response.Actors);
     $("#movie-plot").text(response.Plot);
    
   }
@@ -42,20 +42,27 @@ function saveMyMovies(){
   let now = moment();
   console.log(now);
 
-  // getting user input
-  let myTitle = $("#movie-title").val();
+  // getting user and API input
+  let myTitle = $("#my-title").text();
+  let myYear = $("#year-released").text();
+  let myDir = $("#director-name").text();
+  let myCast = $("#top-billed").text();
+  let myPlot = $("#movie-plot").text();
   let myRating = $("#my-rating").val();
   let myReview = $("#my-review").val();
 
-  // getting API input
 
   // getting array of objects from local storage or creating a new one if there is none
   let stringMyMovies = localStorage.getItem("MyMovies") || "[]";
   let parsedMyMovies= JSON.parse(stringMyMovies);
 
-  // building myMovie object with user inputs
+  // building myMovie object with user and API inputs
   let myMovie = {};
   myMovie.title = myTitle;
+  myMovie.year = myYear;
+  myMovie.director = myDir;
+  myMovie.cast = myCast;
+  myMovie.plot = myPlot;
   myMovie.rating = myRating;
   myMovie.review = myReview;
   myMovie.time = now._d; 
