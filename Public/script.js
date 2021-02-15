@@ -24,9 +24,12 @@ function checkMovie(){
     $("#modal-confirm-body").append(`<img src=${response.Poster}></img>`)
     $("#modal-confirm-body").append(`<p>${response.Title}</p><p> released: ${response.Year}</p><p> dir: ${response.Director}</p><p>top billed: ${response.Actors}</p>`);
 
-    $("#modal-confirm").click(()=>{
-      $("#confirm-movie").modal("hide");
-    })
+    $("#my-title").text(`title: ${response.Title}`);
+    $("#year-released").text(`released: ${response.Year}`);
+    $("#director-name").text(`dir: ${response.Director}`);
+    $("#top-billed").text(`top-billed: ${response.Actors}`);
+    $("#movie-plot").text(response.Plot);
+   
   }
 
 
