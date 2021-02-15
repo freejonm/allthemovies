@@ -4,7 +4,7 @@
   "description": "a movie review social media app",
   "main": "app.js",
   "scripts": {
-    "test": "node test"
+    "test": "npm test"
   },
   "repository": {
     "type": "git",

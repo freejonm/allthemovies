@@ -7,7 +7,6 @@
 body {
     
     background-color: whitesmoke;
-    /* background-color:  white; */
     text-align: center;
 }
 
@@ -27,7 +26,6 @@ body {
     margin-left: 100px;
     
 }
-
 
 .my-profile {
     background-color: white;
@@ -55,8 +53,6 @@ body {
     border: 1px solid black;
 }
 
-
-
 .card {
     border-radius: 5px;
     border: 1px solid black;
@@ -64,8 +60,6 @@ body {
     margin: 0 auto;
     margin-bottom: 10px;
 }
-
-
 
 .my-info {
     color: black;
@@ -92,7 +86,6 @@ body {
     border-radius: 5px;
 }
 
-
 #card-text {
     background-color: black;
     font-size: x-small;
@@ -102,7 +95,6 @@ body {
     color: white;
    
 }
-
 
 #card-title {
     color: white;
@@ -139,7 +131,6 @@ body {
 #rating {
     font-weight: bolder;
 }
-
 
 #submit {
     background-color: black;
