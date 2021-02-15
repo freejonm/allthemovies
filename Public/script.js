@@ -1,9 +1,5 @@
 
 
-// empty array for local storage
-
-
-
 // functions
 
 function checkMovie(){
@@ -26,7 +22,7 @@ function checkMovie(){
     $("#confirm-movie").modal({show: true});
     $("#modal-confirm-body").empty();
     $("#modal-confirm-body").append(`<img src=${response.Poster}></img>`)
-    $("#modal-confirm-body").append(`<p>${response.Title} released in ${response.Year}, directed by ${response.Director}, and starring ${response.Actors}</p>`);
+    $("#modal-confirm-body").append(`<p>${response.Title}</p><p> released: ${response.Year}</p><p> dir: ${response.Director}</p><p>top billed: ${response.Actors}</p>`);
 
     $("#modal-confirm").click(()=>{
       $("#confirm-movie").modal("hide");
