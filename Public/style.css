@@ -14,17 +14,16 @@ body {
     padding : 5px;
     border-radius: 5px;
 }
+
 .navbar {
     background-color: black;
-
 }
 
 .navbar-brand {
     font-size: 50px;
     font-weight: bolder;
     color: white;
-    margin-left: 100px;
-    
+    margin-left: 100px;  
 }
 
 .input-container {
@@ -66,8 +65,7 @@ body {
     line-height: 1px;
     padding-left: 20px;
     border-radius: 10px;
-    color: white;
-   
+    color: white; 
 }
 
 #card-title {
@@ -77,8 +75,7 @@ body {
     text-decoration: underline; 
     text-align: center;
     line-height: 20px;
-    padding: 20px 20px 0px 20px;
-    
+    padding: 20px 20px 0px 20px; 
 }
 
 #delete {
@@ -126,6 +123,5 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     font-size: large;
-
     width: 100%;
 }
