@@ -67,6 +67,8 @@ function saveMyMovies(){
   myMovie.review = myReview;
   myMovie.time = now._d; 
 
+  // fetching local api from server
+
   fetch('/api/movies', {
     method: 'POST',
     headers: {
