@@ -27,18 +27,6 @@ body {
     
 }
 
-.my-profile {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    margin: 5px;
-    border-radius: 5px;
-    padding: 20px; 
-    text-align: left;
-    height: 90%;
-
-}
-
 .input-container {
     background-color: white;
     padding: 20px;
@@ -61,14 +49,6 @@ body {
     margin-bottom: 10px;
 }
 
-.my-info {
-    color: black;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 20px;
-}
-
 #check-movie {
     background-color: black;
     color: white;
@@ -79,12 +59,6 @@ body {
     margin-top: 50px;
 }
 
-
-#profile-pic {
-    width: 50%;
-    height: auto;
-    border-radius: 5px;
-}
 
 #card-text {
     background-color: black;
