@@ -22,7 +22,7 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/public/index.html
 // sending movies array to server
 app.get('/api/movies', (req, res) => res.json(movies));
 
-// Create New Characters - takes in JSON input
+// Create New Movie - takes in JSON input
 app.post('/api/movies', (req, res) => {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware

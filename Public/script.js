@@ -158,6 +158,16 @@ $("#hide-movies").click(()=>{
   $("#movie-cards").empty();
 })
 
+
+// in development
+
+// code for filter
+
+const filterMovies(genre)=>{
+  return genre === "Horror";
+}
+
+saveMyMovies.filter(filterMovies);
  
   
 
