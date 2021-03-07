@@ -24,8 +24,10 @@ function checkMovie(){
     $("#modal-confirm-body").append(`<img src=${response.Poster}></img>`)
     $("#modal-confirm-body").append(`<p>${response.Title}</p><p> released: ${response.Year}</p><p> dir: ${response.Director}</p><p>top billed: ${response.Actors}</p>`);
 
+    $("#my-poster").attr("src", response.Poster);  
     $("#my-title").text(response.Title);
     $("#year-released").text(response.Year);
+    $("#my-genre").text(response.Genre);
     $("#director-name").text(response.Director);
     $("#top-billed").text(response.Actors);
     $("#movie-plot").text(response.Plot);
@@ -43,6 +45,7 @@ function saveMyMovies(){
   console.log(now);
 
   // getting user and API input
+  let myPoster = $("#my-poster").src();
   let myTitle = $("#my-title").text();
   let myYear = $("#year-released").text();
   let myDir = $("#director-name").text();
@@ -58,6 +61,7 @@ function saveMyMovies(){
 
   // building myMovie object with user and API inputs
   let myMovie = {};
+  myMovie.poster = myPoster;
   myMovie.title = myTitle;
   myMovie.year = myYear;
   myMovie.director = myDir;
@@ -161,13 +165,7 @@ $("#hide-movies").click(()=>{
 
 // in development
 
-// code for filter
 
-const filterMovies(genre)=>{
-  return genre === "Horror";
-}
-
-saveMyMovies.filter(filterMovies);
  
   
 
