@@ -21,7 +21,7 @@ function checkMovie(){
     else {
     $("#confirm-movie").modal({show: true});
     $("#modal-confirm-body").empty();
-    $("#modal-confirm-body").append(`<img src=${response.Poster}></img>`)
+    $("#modal-confirm-body").append(`<img id="confirm-poster" src=${response.Poster}></img>`)
     $("#modal-confirm-body").append(`<p>${response.Title}</p><p> released: ${response.Year}</p><p> dir: ${response.Director}</p><p>top billed: ${response.Actors}</p>`);
 
     $("#my-poster").attr("src", response.Poster);  
@@ -45,9 +45,10 @@ function saveMyMovies(){
   console.log(now);
 
   // getting user and API input
-  let myPoster = $("#my-poster").src();
+  let myPoster = $("#my-poster").html();
   let myTitle = $("#my-title").text();
   let myYear = $("#year-released").text();
+  let myGenre = $("#my-genre").text();
   let myDir = $("#director-name").text();
   let myCast = $("#top-billed").text();
   let myPlot = $("#movie-plot").text();
@@ -64,6 +65,7 @@ function saveMyMovies(){
   myMovie.poster = myPoster;
   myMovie.title = myTitle;
   myMovie.year = myYear;
+  myMovie.genre = myGenre;
   myMovie.director = myDir;
   myMovie.cast = myCast;
   myMovie.plot = myPlot;
