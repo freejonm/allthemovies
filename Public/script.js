@@ -31,10 +31,9 @@ function checkMovie(){
     $("#director-name").text(response.Director);
     $("#top-billed").text(response.Actors);
     $("#movie-plot").text(response.Plot);
-   
   }
 
-
+  
     
   })
 
@@ -45,7 +44,7 @@ function saveMyMovies(){
   console.log(now);
 
   // getting user and API input
-  let myPoster = $("#my-poster").html();
+  let myPoster = $("#confirm-poster").html();
   let myTitle = $("#my-title").text();
   let myYear = $("#year-released").text();
   let myGenre = $("#my-genre").text();
@@ -106,26 +105,18 @@ function showMovies(){
   console.log(parsedMemory);
 
 
-  parsedMemory.forEach(movie => (
+  parsedMemory.forEach(movie => {
     
-    console.log(movie.title),
-
-    $.ajax({
-      url: "https://www.omdbapi.com/?t=" + movie.title +"&y=&plot=short&filter_sort_order=asc&apikey=c2a157c7",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-
-      let cast = response.Actors;
+      let cast = movie.cast;
       let castArray = cast.split(",");
       
       // append cards
       $("#movie-cards").append(
-        `<div class=card><img class=card-img-top src=${response.Poster}></img><div class=card-body><div class=text-center id=card-text><p id = card-title>${ response.Title} ${response.Year}</p><p class=card-text id=genre>genre: ${response.Genre} </p><p class=card-text id=country>country: ${response.Country}</p><p class=card-text id=director>dir: ${response.Director}</p><p class=card-text id=cast>top-billed: ${castArray[0]}, ${castArray[1]},</p><p class=card-text id=cast>${castArray[2]}, ${castArray[3]}.</p><p class=card-text id=plot>${response.Plot}</p></div><div class=my-info> <p id=rating>${movie.rating}/5</p><p id=review>${movie.review}</p></div>`
+        `<div class=card><img class=card-img-top src=""></img><div class=card-body><div class=text-center id=card-text><p id = card-title>${movie.title} ${movie.year}</p><p class=card-text id=genre>genre: ${movie.genre}<p class=card-text id=director>dir: ${movie.director}</p><p class=card-text id=cast>top-billed: ${castArray[0]}, ${castArray[1]},</p><p class=card-text id=cast>${castArray[2]}, ${castArray[3]}.</p><p class=card-text id=plot>${movie.plot}</p></div><div class=my-info> <p id=rating>${movie.rating}/5</p><p id=review>${movie.review}</p></div>`
         );
 
-    }))   )
-}
+    })};
+
 
 
 
